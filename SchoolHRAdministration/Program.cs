@@ -14,13 +14,15 @@ namespace SchoolHRAdministration
 
             seedData(employees);
 
-            foreach(IEmployee employee in employees)
-            {
-                totalOfSalary += employee.Salary;
-            }
+            //foreach(IEmployee employee in employees)
+            //{
+            //    totalOfSalary += employee.Salary;
+            //}
 
-            Console.WriteLine($"Total Annul Salary (incloude bouns) :: {totalOfSalary} ");
+            //Console.WriteLine($"Total Annul Salary (incloude bouns) :: {totalOfSalary} ");
 
+
+            Console.WriteLine($"Total Annul Salary (incloude bouns) :: {employees.Sum(e => e.Salary)} ");
         }
 
         public static void seedData(List<IEmployee> employees)
